@@ -1,0 +1,184 @@
+---
+title: "Understanding Dilution"
+description: "How ownership percentages change when you issue new shares during fundraising rounds"
+---
+
+## What is Dilution?
+
+Dilution occurs when the percentage ownership of existing shareholders, including the token owner, decreases as new shares are issued during a fundraising round. While the absolute number of shares owned remains the same, each share represents a smaller percentage of the total token.
+
+## How Dilution Works
+
+With each funding round, ownership percentages shift as new shares are issued and the total number of outstanding shares increases.
+
+### Basic Example
+
+Let's say your personal token has these characteristics:
+
+- **Total shares**: 10 million
+- **Your ownership**: 9 million shares (90%)
+- **Investor ownership**: 1 million shares (10%)
+
+If you decide to raise more capital by selling an additional 1 million new shares:
+
+- **New total shares**: 11 million
+- **Your ownership**: 9 million ÷ 11 million = **81.8%** (down from 90%)
+- **Original investor ownership**: 1 million ÷ 11 million = **9.1%** (down from 10%)
+- **New investor ownership**: 1 million ÷ 11 million = **9.1%**
+
+<Info>
+  Notice how both you and your original investors experienced dilution, even
+  though you received the full benefit of the new capital raised.
+</Info>
+
+## Detailed Dilution Scenario
+
+Here's a more comprehensive example showing multiple rounds:
+
+<Steps>
+  <Step title="Initial State">
+    **Total shares**: 10M **Your ownership**: 10M shares (100%)
+  </Step>
+  <Step title="Series A">
+    **New shares issued**: 1M at $1/share **Capital raised**: $1M **Total
+    shares**: 11M **Your ownership**: 10M ÷ 11M = 90.9% **Investor ownership**:
+    1M ÷ 11M = 9.1%
+  </Step>
+  <Step title="Series B">
+    **New shares issued**: 2M at $2/share **Capital raised**: $4M **Total
+    shares**: 13M **Your ownership**: 10M ÷ 13M = 76.9% **Series A investors**:
+    1M ÷ 13M = 7.7% **Series B investors**: 2M ÷ 13M = 15.4%
+  </Step>
+  <Step title="Final Result">
+    **Total capital raised**: $5M **Your dilution**: From 100% to 76.9% **But
+    you maintain control** and have significant capital
+  </Step>
+</Steps>
+
+## Investor Protections Against Dilution
+
+To protect early investors who take the highest risk, the Network provides several anti-dilution mechanisms:
+
+### 1. Pro Rata Rights
+
+Existing shareholders have the **right (but not obligation)** to participate in future funding rounds to maintain their ownership percentage.
+
+**Example**: If an investor owns 5% and you're raising a new round, they can invest enough to maintain their 5% ownership after the round closes.
+
+### 2. Information Rights
+
+- **7-day minimum notice** before any fundraising round
+- Shareholders receive details about:
+  - Number of shares being sold
+  - Price per share
+  - Round timeline
+  - How to exercise pro rata rights
+
+### 3. Anti-Dilution Provisions
+
+Protection against "down rounds" where you raise capital at a lower valuation than previous rounds.
+
+**How it works**:
+
+- If you previously sold shares at $2 each
+- But now need to sell at $1 each (down round)
+- The Network automatically adjusts early investors' share allocations
+- Similar to weighted-average anti-dilution in traditional VC
+
+<Warning>
+  Anti-dilution provisions are automatically enforced by the Network's smart
+  contracts. You cannot opt out of these protections.
+</Warning>
+
+## Strategic Considerations
+
+### For Token Owners
+
+**Benefits of accepting dilution**:
+
+- Access to capital for growth and investments
+- Bringing on strategic investors with valuable networks
+- Sharing risk with aligned partners
+- Potential for higher absolute returns even with lower percentage
+
+**Managing dilution**:
+
+- Price rounds appropriately to minimize unnecessary dilution
+- Choose investors who add strategic value beyond capital
+- Consider the long-term impact of each round
+- Maintain control through board composition and voting rights
+
+### For Investors
+
+**Understanding your protection**:
+
+- Pro rata rights help you avoid dilution in future rounds
+- Information rights ensure you're informed about opportunities
+- Anti-dilution provisions protect against down rounds
+- Secondary market provides liquidity options
+
+## Dilution vs. Value Creation
+
+It's important to understand that dilution isn't inherently bad if it leads to value creation:
+
+### Positive Scenario
+
+- You raise $1M by selling 10% of your token
+- Use that capital to make investments that generate 50% returns
+- Your 90% ownership of a more valuable token may be worth more than your previous 100%
+
+### Example Calculation
+
+- **Before**: 100% of $5M token = $5M value
+- **After**: 90% of $8M token = $7.2M value
+- **Result**: Despite dilution, your value increased by $2.2M
+
+<Tip>
+  Focus on value creation, not just ownership percentage. Strategic dilution can
+  be highly beneficial if it accelerates your growth and investment
+  opportunities.
+</Tip>
+
+## Best Practices
+
+### Planning Your Rounds
+
+1. **Model different scenarios** before setting terms
+2. **Consider long-term dilution** across multiple rounds
+3. **Price rounds fairly** but don't undervalue yourself
+4. **Communicate clearly** with existing investors
+
+### Managing Investor Expectations
+
+1. **Be transparent** about future fundraising plans
+2. **Explain your growth strategy** and capital needs
+3. **Give adequate notice** for pro rata participation
+4. **Maintain regular communication** about progress
+
+## Tools and Resources
+
+The Network provides several tools to help manage dilution:
+
+- **Cap table management** - Real-time ownership tracking
+- **Dilution modeling** - Scenario planning for future rounds
+- **Pro rata calculators** - Help investors understand their rights
+- **Automatic notifications** - Ensure compliance with information rights
+
+<CardGroup cols={2}>
+  <Card title="Raising Capital" icon="chart-line-up" href="/raising-capital">
+    Learn the full fundraising process
+  </Card>
+  <Card
+    title="Investor Rights"
+    icon="shield-check"
+    href="/raising-capital#investor-protections"
+  >
+    Understand all investor protections
+  </Card>
+  <Card title="Secondary Sales" icon="arrows-retweet" href="/secondary-sales">
+    Explore liquidity options for investors
+  </Card>
+  <Card title="Dividends" icon="coins" href="/dividends">
+    Learn how dilution affects dividend distribution
+  </Card>
+</CardGroup>{" "}
