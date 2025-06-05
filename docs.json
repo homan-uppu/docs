@@ -33,23 +33,7 @@
       }
     ],
     "global": {
-      "anchors": [
-        {
-          "anchor": "Network",
-          "href": "#",
-          "icon": "network-wired"
-        },
-        {
-          "anchor": "Community",
-          "href": "#",
-          "icon": "users"
-        },
-        {
-          "anchor": "Support",
-          "href": "#",
-          "icon": "envelope"
-        }
-      ]
+      "anchors": []
     }
   },
   "logo": {
@@ -57,22 +41,12 @@
     "dark": "/logo/dark.svg"
   },
   "navbar": {
-    "links": [
-      {
-        "label": "Dashboard",
-        "href": "#"
-      }
-    ],
+    "links": [],
     "primary": {
       "type": "button",
       "label": "Create Token",
-      "href": "#"
+      "href": "https://personaltoken.net"
     }
   },
-  "footer": {
-    "socials": {
-      "github": "#",
-      "twitter": "#"
-    }
-  }
+  "footer": {}
 }
