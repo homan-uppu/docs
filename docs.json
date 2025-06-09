@@ -1,33 +1,53 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Personal Tokens",
+  "name": "PersonalTokenNet",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#000000",
+    "light": "#000000",
+    "dark": "#000000"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "Documentation",
+        "tab": "Learn",
         "groups": [
           {
-            "group": "Overview",
-            "pages": ["index", "personal-token", "network"]
+            "group": "Getting Started",
+            "pages": ["docs/personal-token", "docs/create-personal-token"]
           },
           {
-            "group": "Core Concepts",
-            "pages": ["raising-capital", "dilution", "dividends", "investing"]
+            "group": "Fundraise",
+            "pages": [
+              "docs/fundraise-overview",
+              "docs/dilution",
+              "docs/start-fundraising-round",
+              "docs/invite-investors",
+              "docs/open-round-to-net",
+              "docs/manage-round",
+              "docs/fees",
+              "docs/dividends",
+              "docs/reporting-capital-gains",
+              "docs/withdraw-capital"
+            ]
           },
           {
-            "group": "Advanced Features",
-            "pages": ["secondary-sales", "reporting", "transaction-fees"]
+            "group": "Invest",
+            "pages": [
+              "docs/invest-overview",
+              "docs/deposit-capital",
+              "docs/secondary-sales"
+            ]
           },
           {
-            "group": "FAQ",
-            "pages": ["questions"]
+            "group": "Other",
+            "pages": [
+              "docs/network-token",
+              "docs/reputation",
+              "docs/legal",
+              "docs/company-structure"
+            ]
           }
         ]
       }
@@ -41,12 +61,17 @@
     "dark": "/logo/dark.svg"
   },
   "navbar": {
-    "links": [],
     "primary": {
       "type": "button",
-      "label": "Create Token",
+      "label": "Home",
       "href": "https://personaltoken.net"
-    }
+    },
+    "links": [
+      {
+        "label": "About",
+        "href": "https://personaltoken.net/about"
+      }
+    ]
   },
   "footer": {}
 }
