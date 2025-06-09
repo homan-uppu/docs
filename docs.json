@@ -4,7 +4,7 @@
   "name": "PersonalTokenNet",
   "colors": {
     "primary": "#000000",
-    "light": "#000000",
+    "light": "#fff",
     "dark": "#000000"
   },
   "favicon": "/favicon.svg",
@@ -57,8 +57,8 @@
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/logo-light.svg",
+    "dark": "/logo/logo-dark.svg"
   },
   "navbar": {
     "primary": {
