@@ -48,6 +48,10 @@
               "docs/legal",
               "docs/company-structure"
             ]
+          },
+          {
+            "group": "Frequently asked",
+            "pages": ["faq/why-dilution"]
           }
         ]
       }
