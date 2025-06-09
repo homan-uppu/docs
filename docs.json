@@ -15,7 +15,11 @@
         "groups": [
           {
             "group": "Getting Started",
-            "pages": ["docs/personal-token", "docs/create-personal-token"]
+            "pages": [
+              "docs/system-overview",
+              "docs/personal-token",
+              "docs/create-personal-token"
+            ]
           },
           {
             "group": "Fundraise",
@@ -43,10 +47,12 @@
           {
             "group": "Other",
             "pages": [
+              "docs/the-net",
+              "docs/the-company",
+              "docs/net-vs-company",
               "docs/network-token",
               "docs/reputation",
-              "docs/legal",
-              "docs/company-structure"
+              "docs/legal"
             ]
           },
           {

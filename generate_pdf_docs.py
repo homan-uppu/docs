@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Script to generate a single PDF containing all documentation files
+Script to generate a single markdown file containing all documentation files
 in the order specified by docs.json schema.
 """
 
@@ -8,11 +8,6 @@ import json
 import os
 from pathlib import Path
 import re
-from reportlab.lib.pagesizes import letter, A4
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, PageBreak
-from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
-from reportlab.lib.units import inch
-from reportlab.lib.colors import HexColor
 
 def read_docs_schema(schema_path="docs.json"):
     """Read and parse the docs.json file to get the structure."""
@@ -101,71 +96,30 @@ def read_mdx_file(file_path):
         print(f"Error reading {file_path}: {e}")
         return None, None
 
-def convert_mdx_to_text(content):
-    """Convert MDX content to plain text suitable for PDF."""
+def convert_mdx_to_markdown(content):
+    """Convert MDX content to clean markdown, removing JSX components but preserving markdown formatting."""
     if not content:
         return ""
     
-    # Remove JSX components and HTML tags
+    # Remove JSX components and HTML tags while preserving content
+    # Handle image tags - convert to markdown image syntax
+    content = re.sub(r'<img[^>]*src=["\']([^"\']*)["\'][^>]*alt=["\']([^"\']*)["\'][^>]*/?>', r'![\\2](\\1)', content)
+    content = re.sub(r'<img[^>]*alt=["\']([^"\']*)["\'][^>]*src=["\']([^"\']*)["\'][^>]*/?>', r'![\\1](\\2)', content)
+    
+    # Remove other HTML/JSX tags but keep their content
+    content = re.sub(r'<div[^>]*>', '', content)
+    content = re.sub(r'</div>', '', content)
     content = re.sub(r'<[^>]+>', '', content)
     
-    # Convert markdown formatting to simple text indicators
-    content = re.sub(r'\*\*(.*?)\*\*', r'\1', content)  # Bold
-    content = re.sub(r'\*(.*?)\*', r'\1', content)      # Italic
-    content = re.sub(r'`(.*?)`', r'"\1"', content)      # Inline code
-    
-    # Handle code blocks
-    content = re.sub(r'```[\s\S]*?```', '[Code Block]', content)
-    
-    # Clean up extra whitespace
-    content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
+    # Clean up extra whitespace but preserve paragraph breaks
+    content = re.sub(r'\n\s*\n\s*\n+', '\n\n', content)
+    content = re.sub(r'^\s+', '', content, flags=re.MULTILINE)
     
     return content.strip()
 
-def create_pdf_styles():
-    """Create custom styles for the PDF."""
-    styles = getSampleStyleSheet()
-    
-    # Custom title style
-    title_style = ParagraphStyle(
-        'CustomTitle',
-        parent=styles['Heading1'],
-        fontSize=18,
-        spaceAfter=20,
-        textColor=HexColor('#000000'),
-        alignment=0  # Left alignment
-    )
-    
-    # Custom group header style
-    group_style = ParagraphStyle(
-        'GroupHeader',
-        parent=styles['Heading2'],
-        fontSize=14,
-        spaceBefore=20,
-        spaceAfter=10,
-        textColor=HexColor('#333333'),
-        alignment=0
-    )
-    
-    # Custom body text style
-    body_style = ParagraphStyle(
-        'CustomBody',
-        parent=styles['Normal'],
-        fontSize=10,
-        spaceAfter=8,
-        alignment=0
-    )
-    
-    return {
-        'title': title_style,
-        'group': group_style,
-        'body': body_style,
-        'normal': styles['Normal']
-    }
-
-def generate_pdf(output_filename="documentation.pdf"):
-    """Main function to generate the PDF documentation."""
-    print("Starting PDF generation...")
+def generate_markdown(output_filename="documentation.md"):
+    """Main function to generate the markdown documentation."""
+    print("Starting markdown generation...")
     
     # Read the schema
     schema = read_docs_schema()
@@ -173,36 +127,25 @@ def generate_pdf(output_filename="documentation.pdf"):
     
     print(f"Found {len([p for p in pages if p['type'] == 'page'])} pages to process")
     
-    # Create PDF document
-    doc = SimpleDocTemplate(
-        output_filename,
-        pagesize=A4,
-        rightMargin=inch,
-        leftMargin=inch,
-        topMargin=inch,
-        bottomMargin=inch
-    )
-    
-    # Get styles
-    styles = create_pdf_styles()
-    
-    # Build the story (content for PDF)
-    story = []
+    # Build the markdown content
+    markdown_content = []
     
     # Add main title
     main_title = schema.get('name', 'Documentation')
-    story.append(Paragraph(main_title, styles['title']))
-    story.append(Spacer(1, 20))
+    markdown_content.append(f"# {main_title}")
+    markdown_content.append("")  # Empty line
     
     processed_pages = 0
     skipped_pages = 0
+    current_group = None
     
     # Process each page
     for page_info in pages:
         if page_info['type'] == 'group_header':
-            # Add group header
-            story.append(Paragraph(page_info['title'], styles['group']))
-            story.append(Spacer(1, 10))
+            # Add group header as H2
+            current_group = page_info['title']
+            markdown_content.append(f"## {page_info['title']}")
+            markdown_content.append("")  # Empty line
             
         elif page_info['type'] == 'page':
             # Read the MDX file
@@ -210,40 +153,31 @@ def generate_pdf(output_filename="documentation.pdf"):
             title, content = read_mdx_file(file_path)
             
             if title and content:
-                # Add page title
-                story.append(Paragraph(title, styles['title']))
-                story.append(Spacer(1, 10))
+                # Add page title as H3
+                markdown_content.append(f"### {title}")
+                markdown_content.append("")  # Empty line
                 
                 # Convert and add content
-                text_content = convert_mdx_to_text(content)
-                if text_content:
-                    # Split content into paragraphs
-                    paragraphs = text_content.split('\n\n')
-                    for para in paragraphs:
-                        if para.strip():
-                            story.append(Paragraph(para.strip(), styles['body']))
-                            story.append(Spacer(1, 6))
+                markdown_text = convert_mdx_to_markdown(content)
+                if markdown_text:
+                    markdown_content.append(markdown_text)
+                    markdown_content.append("")  # Empty line after content
+                    markdown_content.append("---")  # Separator between sections
+                    markdown_content.append("")  # Empty line after separator
                 
-                # Add some space after each document
-                story.append(Spacer(1, 20))
                 processed_pages += 1
             else:
                 print(f"Skipping {file_path} - could not read content")
                 skipped_pages += 1
     
-    # Build the PDF
-    print(f"Building PDF: {output_filename}")
+    # Write the markdown file
+    final_content = '\n'.join(markdown_content)
+    
+    with open(output_filename, 'w', encoding='utf-8') as f:
+        f.write(final_content)
+    
+    print(f"Markdown file generated successfully: {output_filename}")
     print(f"Processed: {processed_pages} pages, Skipped: {skipped_pages} pages")
-    doc.build(story)
-    print(f"PDF generated successfully: {output_filename}")
 
 if __name__ == "__main__":
-    # Check if required packages are available
-    try:
-        import reportlab
-    except ImportError:
-        print("Error: reportlab package is required.")
-        print("Install it with: pip install reportlab")
-        exit(1)
-    
-    generate_pdf() 
+    generate_markdown() 
