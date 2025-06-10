@@ -30,7 +30,7 @@
             "pages": [
               "fundraise-overview",
               "dilution",
-              "start-fundraising-round",
+              "new-fundraising-round",
               "invite-investors",
               "open-round-to-net",
               "manage-round",
@@ -42,16 +42,21 @@
             "pages": ["invest-overview", "deposit-capital", "secondary-sales"]
           },
           {
-            "group": "Other",
+            "group": "Core concepts",
             "pages": [
               "fees",
-              "tax",
               "dividends",
+              "tax",
               "reporting-capital-gains",
+              "network-token"
+            ]
+          },
+          {
+            "group": "Other",
+            "pages": [
               "the-net",
               "the-company",
               "net-vs-company",
-              "network-token",
               "reputation",
               "fraud",
               "legal"
