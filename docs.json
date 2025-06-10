@@ -3,9 +3,13 @@
   "theme": "mint",
   "name": "PersonalTokenNet",
   "colors": {
-    "primary": "#000000",
-    "light": "#fff",
-    "dark": "#000000"
+    "primary": "#000",
+    "light": "#000",
+    "dark": "#000"
+  },
+  "appearance": {
+    "default": "light",
+    "strict": true
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -16,43 +20,41 @@
           {
             "group": "Getting Started",
             "pages": [
-              "docs/system-overview",
-              "docs/personal-token",
-              "docs/create-personal-token"
+              "system-overview",
+              "personal-token",
+              "create-personal-token"
             ]
           },
           {
             "group": "Fundraise",
             "pages": [
-              "docs/fundraise-overview",
-              "docs/dilution",
-              "docs/start-fundraising-round",
-              "docs/invite-investors",
-              "docs/open-round-to-net",
-              "docs/manage-round",
-              "docs/fees",
-              "docs/dividends",
-              "docs/reporting-capital-gains",
-              "docs/withdraw-capital"
+              "fundraise-overview",
+              "dilution",
+              "start-fundraising-round",
+              "invite-investors",
+              "open-round-to-net",
+              "manage-round",
+              "dividends",
+              "reporting-capital-gains",
+              "withdraw-capital"
             ]
           },
           {
             "group": "Invest",
-            "pages": [
-              "docs/invest-overview",
-              "docs/deposit-capital",
-              "docs/secondary-sales"
-            ]
+            "pages": ["invest-overview", "deposit-capital", "secondary-sales"]
           },
           {
             "group": "Other",
             "pages": [
-              "docs/the-net",
-              "docs/the-company",
-              "docs/net-vs-company",
-              "docs/network-token",
-              "docs/reputation",
-              "docs/legal"
+              "fees",
+              "tax",
+              "the-net",
+              "the-company",
+              "net-vs-company",
+              "network-token",
+              "reputation",
+              "fraud",
+              "legal"
             ]
           },
           {
