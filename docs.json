@@ -34,8 +34,6 @@
               "invite-investors",
               "open-round-to-net",
               "manage-round",
-              "dividends",
-              "reporting-capital-gains",
               "withdraw-capital"
             ]
           },
@@ -48,6 +46,8 @@
             "pages": [
               "fees",
               "tax",
+              "dividends",
+              "reporting-capital-gains",
               "the-net",
               "the-company",
               "net-vs-company",
