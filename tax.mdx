@@ -1,0 +1,38 @@
+---
+title: Taxes
+---
+
+## 1. Primary fundraise
+
+| Stage                                          | What happens in the Net                                      | Federal / CA tax result                                                                                                                                                                                | Who files / pays | When |
+| ---------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------- | ---- |
+| Token owner sells newly-minted shares for USDC | Owner receives cash; investors receive personal-token shares | **Not taxable to either side at closing**. Mirrors a corporation issuing stock: proceeds are a capital contribution, not income. Basis: investor's cost; owner's basis in newly-issued shares is zero. | —                | —    |
+
+## 2. Secondary sales (investor ↔ investor or investor → token-owner)
+
+| Stage                                                                                             | What happens on-chain                                                                 | Federal / CA tax result                                                                                 | Who files / pays | Forms & due dates                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **1. Seller transfers personal-token shares for USDC**                                            | Seller gets cash; buyer gets the shares                                               | Seller realises **cap-gain / loss** (short- or long-term)                                               | Seller           | 1040 + Schedule D / CA 540 Schedule D (trade date)                                                                                                                   |
+| **2. Seller's own _personal-token_ shareholders receive a pre-tax dividend of the seller's gain** | Smart contract “Distribute Gain” fires against SellerToken; USDC is paid out pro-rata | **Ordinary income** to each recipient shareholder (it is a dividend, not a capital gain in their hands) | Seller           | • **≤ \$250 k lifetime raises:** 1099-DIV (Box 1a), send by 31 Jan & e-file by 31 Mar • **> \$250 k:** Schedule K-1 (Form 1065), deliver by 15 Mar (or on extension) |
+| **3. 2 % royalty auto-split** (1.5 % token owner, 0.5 % NetworkToken treasury)                    | Royalty recipients get USDC in their wallets.                                         | **Ordinary income** to each recipient                                                                   | Token owner      | 1099-MISC (≤ \$250 k) or K-1 (> \$250 k)                                                                                                                             |
+
+_Note: the seller is the only party that files the information return (1099-DIV or K-1) with the IRS. The shareholder receiving dividends does not re-file that form; they simply copy the numbers onto their own tax return and keep the form for their records. (as it works with real world dividends)._
+
+## 3. Real-world equity sale by token owner (outside of Net)
+
+| Flow                                        | Tax on the owner                                                                            | “Dividend” inside PTN                                                                 | Tax on shareholders                                                                                                                                                    | Compliance mechanics                                                                                                                                                                                                                                                                                                                       |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Owner realises capital gain outside the Net | Owner pays federal & CA **capital-gains tax on 100 % of the gain** at the time of the sale. | PTN rules require owner to sweep the _gross_ gain (pre-tax) pro-rata to token holders | Each shareholder receives USDC. For them this is **ordinary income**, reported on 1099-DIV box 3 (non-qualified dividends). No capital-gains character passes through. | Until \$250 k lifetime raises: owner issues 1099-DIVs directly. After \$250 k: the single-member CA LLC issues Schedule K-1s instead, converting payouts to partnership distributive share (thus shareholders shoulder their piece of the capital gain and the owner avoids double taxation). The Net spits out all forms ready to submit. |
+
+## Summarized
+
+| Tax                                                                                       | Payer                      | Moment                           |
+| ----------------------------------------------------------------------------------------- | -------------------------- | -------------------------------- |
+| Federal & CA _capital-gains_ tax on Company stock exit (outside of Net)                   | Token owner / LLC          | Trade date                       |
+| Federal & CA _capital-gains_ tax on personal-token secondary sale                         | Selling shareholder        | Trade date                       |
+| Federal & CA _ordinary-income_ tax on dividends from personal token wallet                | Each receiving shareholder | Cash receipt                     |
+| CA _LLC franchise_ tax (only for personal token owners who have raised more than \$250 k) | Token LLCs (post-\$250 k)  | 15ᵗʰ day of 4ᵗʰ month; \$800 min |
+
+## We have your back
+
+Yes, taxes are a pain in the ass. We're here to make sure it's as seamless as possible for you. All forms to submit will be auto-generated and wherever possible we'll file on your behalf while keeping you in the loop.

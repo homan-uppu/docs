@@ -53,18 +53,16 @@
           },
           {
             "group": "Other",
-            "pages": [
-              "the-net",
-              "the-company",
-              "net-vs-company",
-              "reputation",
-              "fraud",
-              "legal"
-            ]
-          },
+            "pages": ["decentralization", "reputation", "fraud", "legal"]
+          }
+        ]
+      },
+      {
+        "tab": "FAQ",
+        "groups": [
           {
-            "group": "Frequently asked",
-            "pages": ["faq/why-dilution", "faq/shareholder-voting"]
+            "group": "Questions",
+            "pages": ["questions/why-dilution", "questions/shareholder-voting"]
           }
         ]
       }

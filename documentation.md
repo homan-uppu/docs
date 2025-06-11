@@ -2,6 +2,54 @@
 
 ## Getting Started
 
+### How it works
+
+This is a brief overview of the main concepts of PersonalTokenNet.
+## A personal token
+At the heart of the system is a personal token: an instrument that is tied to a single human being, that represents their potential to create economic value — grounded in their equities in companies and other personal tokens (NO personal assets such as houses, cars, salaries, etc. are a part of the personal token).
+Anyone looking to transact in any way with personal tokens will need to create their own personal token.
+## The "Net"
+The "Net" is the network of personal tokens. Like how people have personal tokens, the Net has a "NetworkToken" which can gain equity in other personal tokens (see "equity fee" below).
+You can also buy equity in the NetworkToken which is a way to indirectly invest in the success of the entire Net. (Note: this is not possible during early access.).
+## Fundraising (selling equity in your personal token)
+A personal token is divided into shares: its smallest unity of equity. When you fundraise by selling equity in your personal token, you are selling shares of your personal token to investors who will then become shareholders of your personal token, and join you in your journey without having any control (voting rights, etc.) over you in any way.
+[Learn more about fundraising](/fundraise-overview).
+## Obligations after you fundraise.
+When you fundraise, you are promising to pay dividends to your shareholders. Each shareholder gets a percentage of your capital gains (from selling equity in companies or other personal tokens) proportional to how much equity they have in your personanl token (before federal / state capital gains taxes are applied). _(For example: if you sell your equity in a company for \$3 million, and you have 3 shareholders who each own 1% of your personal token, each shareholder will get \$30,000 in capital gains, before any taxes are applied)._
+If you have personal token shareholders you will need to report your capital gains every year to PersonalTokenNet and make sure your personanl token wallet has enough money to pay dividends to your shareholders (which will be transfered from your personal token wallet to the shareholder's personal token wallet within the Net). You only have to do this once a year (by the US tax deadline), and we'll remind you and walk you through the process when the time comes.
+You can also keep your shareholders up-to-date on your progress if you feel like it, but it's not required. Your shareholders are incentivized to help you win since they have skin in your game. The more transparent you are with them, and the more clearly you communicate what you want, the easier it will be for them to help you. Use them!
+Learn more about [dividends](/dividends) & [reporting capital gains](/reporting-capital-gains).
+## Investing (in personal tokens)
+You need enough money in your personal token wallet to cover the amount you want to invest before your purchase goes through.
+If a personal token fundraising round is public to the Net, you can request the token owner to allow you to invest in their personal token. Otherwise, you can only invest in personal tokens that you have been invited to invest in.
+There are 2 ways to profit from investing:
+1. Earn [dividends](/docs/dividends)
+2. Selling equity to another investor ([secondary sales](/docs/secondary-sales)).
+[Learn more about investing](/invest-overview).
+## Fees
+On successful fundraise:
+- Gas fee: a nominal amount (usually a few dollars) to facilitate a transaction in the Network.
+- Admin fee: occurs when a shareholder raises capital through a fundraising round.
+- Equity fee: a small (0.1% equity) is allocated to the [Network Token](/network-token) (similar to a personal token but one that represents the entire Net).
+(These fees will be negligibly small compared to the amount of money you're raising.)
+For secondary sales:
+- Gas fee.
+- A royalty fee of (2%) is automatically collected from the transaction value. This fee is split between the token owner (1.5%) and the NetworkToken (0.5%)
+[Learn more about fees](/fees).
+## Early access restrictions
+- California residents only (and ofc legally in the US).
+- Access is invite-only.
+## Legal stuff
+When you fundraise, both you and investors will be asked to sign a [Token Purchase Agreement](/legal#token-purchase-agreement-overview) which outlines the terms of the investment.
+If you're raising more than $250,000, a [single-member California LLC](/legal#llc-issuer-after-250k-in-total-primary-sales) will be formed on your behalf which will be the [legal issuer](/legal#issuer) of the personal token.
+After you successfuly fundraise, [a Form D and a California Blue-Sky Notice](/legal#filings-for-successful-fundraising-rounds) are filed on your behalf.
+## Taxes
+## Technology
+## Privacy
+## The Net vs. the Company (CCorp)
+
+---
+
 ### What is a personal token?
 
 Your personal token is an instrument that represents your equities in companies and other personal tokens.
@@ -27,7 +75,7 @@ You can only have one personal token on the Net.
 ### Overview
 
 You can raise capital by selling shares of your personal token through discrete fundraising "rounds."
-When you initiate a round, you specify the terms of your offering: how many shares you want to sell and at what price per share. This establishes your token's valuation and determines how much ownership percentage you're transferring to investors. For example, selling 1 million shares (10% of your token) at $1 per share values your entire token at $10 million.
+When you initiate a round, you specify the terms of your offering: how many shares you want to sell and at what price per share. This establishes your token's valuation and determines how much ownership percentage you're transferring to investors.
 You can share a link to your active round with prospective investors, who can then indicate their interest and proposed investment amount. You maintain complete control over investor selection, allowing you to curate your cap table strategically. Each investor you accept will receive shares proportional to their investment, becoming shareholders.
 When you complete the round, the investment funds are immediately deposited into your personal token wallet, and the Network automatically updates all ownership records to reflect the new distribution of shares.
 
@@ -46,7 +94,7 @@ To create alignment with early investors who take the highest risk, personal tok
 
 ---
 
-### Start Fundraising Round
+### New Fundraising Round
 
 [This section is currently empty]
 
@@ -102,7 +150,7 @@ For each completed secondary sale, a small [royalty fee](/fees#secondary-sale-tr
 
 ---
 
-## Other
+## Core concepts
 
 ### Secondary sale transaction fee
 
@@ -110,12 +158,6 @@ A royalty fee of (2%) is automatically collected from the transaction value. Thi
 For example: an investor purchased 100,000 shares of your personal token at 2 USD per share (200,000 USD total) during your fundraising round three years ago. Now, they wish to sell 50,000 shares at 5 USD per share (250,000 USD total) through a Secondary Sale Request. If you exercise your right of first refusal, you would pay 250,000 USD to reacquire these shares. If you decline, your existing shareholders have 7 days to purchase these shares. Assuming the sale completes at the 5 USD price, a 2% fee (5,000 USD) would be charged, with 3,750 USD (1.5%) going to you as the token owner and 1,250 USD (0.5%) going to the Network. The seller would receive 245,000 USD, and the buyer would receive 50,000 shares.
 ### Equity fee
 Every time an individual raises funds through their personal token on the Net, a modest fraction of newly issued shares—just 0.1%—is automatically allocated to the [Network Token](/network-token). In practice, this means the Network Token continuously accumulates micro-stakes across the entire ecosystem of personal tokens.
-
----
-
-### Tax
-
-[This section is currently empty]
 
 ---
 
@@ -129,6 +171,12 @@ We're building tooling to make this a very simple process for you. Any discrepan
 
 ---
 
+### Tax
+
+[This section is currently empty]
+
+---
+
 ### Reporting Capital Gains
 
 If you have shareholders, when you sell equity in companies, since they exist outside of the Network, it's your responsibility to report these transactions and distribute the appropriate capital gains to your shareholders. If you don't have shareholders there's no need to report.
@@ -136,20 +184,6 @@ You are required to report your equity sales once a year, before the tax deadlin
 Most users can complete this annual reporting in minutes through our simple interface. We're actively building integrations with popular equity management platforms and investment services, which will allow many of your transactions to be imported automatically when these integrations launch. For transactions not covered by these integrations, you'll upload standard documents you're already preparing for taxes, like transaction records or tax forms. Our system calculates the capital gains and processes the actual distribution to your shareholders. If your personal token wallet doesn't have sufficient capital, you will be prompted to deposit the necessary funds.
 The Network maintains a reputation system that tracks your reporting history and accuracy. Consistent, timely reporting enhances your reputation score, which is visible to current and potential investors. Significant discrepancies or delays in reporting may affect this score. For larger transactions, a small percentage of distributed funds may be temporarily held in escrow until verification is complete.
 We're going to make this process as simple and automated as possible. We'll be there by your side to minimize admin BS.
-
----
-
-### The Net
-
-The Net is the protocol itself — a set of open, on-chain contracts that mint personal tokens, record every fundraising or secondary sale, and route the 0.10 % “equity fee” (plus any secondary-sale royalties) into a single treasury.
-Nobody owns the Net outright. It's a public-good financial rail to facilitate creating personal tokens and transacting personal token equities.
-
----
-
-### The Company (CCorp)
-
-The C-Corp is the Delaware company that: owns the flagship web/mobile front-end and trademarks, will carry the U.S. broker-dealer / ATS licences that make personal-token trading legal for retail users, employs the engineers and absorbs early compliance costs.
-In other words, the C-Corp is the first (eventually not the only) operator that connects people to the Net.
 
 ---
 
@@ -170,6 +204,22 @@ Unlike personal tokens, the Network Token does not provide dividends to its hold
 
 ---
 
+## Other
+
+### The Net
+
+The Net is the protocol itself — a set of open, on-chain contracts that mint personal tokens, record every fundraising or secondary sale, and route the 0.10 % “equity fee” (plus any secondary-sale royalties) into a single treasury.
+Nobody owns the Net outright. It's a public-good financial rail to facilitate creating personal tokens and transacting personal token equities.
+
+---
+
+### The Company (CCorp)
+
+The C-Corp is the Delaware company that: owns the flagship web/mobile front-end and trademarks, will carry the U.S. broker-dealer / ATS licences that make personal-token trading legal for retail users, employs the engineers and absorbs early compliance costs.
+In other words, the C-Corp is the first (eventually not the only) operator that connects people to the Net.
+
+---
+
 ### Reputation
 
 [This section is currently empty]
@@ -178,7 +228,25 @@ Unlike personal tokens, the Network Token does not provide dividends to its hold
 
 ### Legal
 
-[This section is currently empty]
+## Issuer
+### Individual issuer (up to $250k in total primary sales)
+When you first issue a personal token and raise up to US $250 000 in total primary sales, you (the individual) are the legal “issuer.” Under U.S. securities law a natural person can issue an investment contract just as a company can, so no separate entity is required. Each fundraising round is filed under Rule 506 of Regulation D: we generate the Form D and the California §25102(f) notice, investors self-certify that they are accredited, and the Token Purchase Agreement contains a non-recourse clause that limits their recovery to the token and its on-chain assets. In plain English, your house, savings, or salary remain untouchable unless you commit fraud.
+### LLC issuer (after $250k in total primary sales)
+Once your cumulative raises cross US $250 000, PersonalTokenNet automatically forms a single-member California LLC to step in as the new issuer. Nothing about the token's supply or shareholder record changes; we simply novate the existing contracts so that (i) future legal claims run against the LLC, and (ii) you gain the full statutory liability shield that corporate law provides. Investors re-sign a short joinder acknowledging the LLC; all subsequent Form D filings list the LLC as issuer, and future rounds continue exactly as before. The non-recourse language stays in place, but is now backed by the LLC's limited-liability status for an extra layer of protection.
+## Token Purchase Agreement (overview)
+Think of the Token Purchase Agreement as the simple, grown-up handshake that makes a personal token more than a clever idea on the internet. On one side is you—the founder, designer, athlete or creator—who wants to raise money by selling a sliver of your future upside. On the other side is the investor, someone who meets the SEC's “accredited” standard and has decided your trajectory is worth backing. The Agreement spells out what that investor is actually buying: an on-chain token that entitles them to a fixed percentage of whatever cash you eventually pocket when you turn any of your equity into money—whether that equity is stock from a day-job, options in a start-up you advise, or even another personal token you hold.
+Nothing about the deal forces you to hand physical share certificates to a third-party vault. You keep your Stripe options, neighbourhood-coffee-shop shares or personal-token positions exactly where they already sit. The only promise you make is that, once a year—and no later than the day you file your taxes—you will sweep the agreed slice of any realised gains into a wallet managed for your token holders. That wallet lives inside a single-member California LLC that PersonalTokenNet spins up automatically once you have raised more than $250,000. Until that point you issue tokens in your own name; after the threshold, the LLC steps in as the legal “issuer” while PersonalTokenNet handles all the filings and bookkeeping behind the scenes.
+The Agreement also builds a protective wall: except in the extreme case where a court decides you lied on purpose, investors can never chase your salary, your car or your savings account. Their only recourse is the token itself and whatever sits in the LLC wallet. PersonalTokenNet gets strictly limited access to confirm the math—once a year it can inspect the capital-gains pages of your tax return, with everything else blacked out, to be sure the sweep was correct. Disputes go to arbitration, California law applies, electronic signatures count, and if PersonalTokenNet ever needs to upgrade the smart contract or the LLC shell, the Agreement travels with it automatically.
+In short, the Token Purchase Agreement turns a personal token into a legally solid, investor-ready instrument: clear upside for the buyer, predictable obligations for you, and a safety net that keeps your personal life safely walled off from routine business risk.
+## Filings for successful fundraising rounds
+The following are filed on behalf of the individual raising funds.
+Everything is made simple; you just have to approve and sign.
+All signed documents are always accessible in your dashboard.
+| What gets filed                                           | Contents & purpose                                                                                          | Who hits “submit”                                                                             | Fee(s)                                      | Timing                                                        |
+| --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------------------- | ------------------------------------------------------------- |
+| **Form D** (SEC, EDGAR)                                   | One-page notice that the offering is exempt under Reg D; lists issuer, amounts sold, and type of investors. | PTN’s outside counsel on behalf of the **issuer** (natural person or, post-\$250 k, the LLC). | \$0 SEC fee.                                | _Within 15 calendar days_ after the first sale in each round. |
+| **California Blue-Sky Notice** (§25102(f))                | Copy of Form D + short cover sheet; lets CA track local private placements.                                 | Same counsel.                                                                                 | **\$300** to CA DFPI + \~\$200 service fee. | Same 15-day window.                                           |
+| **Accreditation verification records** (Rule 506(c) only) | Evidence investor is accredited (W-2, K-1, CPA letter).                                                     | PTN-integrated vendor.                                                                        | \$60–\$120 **per investor**.                | Before countersigning subscription agreements.                |
 
 ---
 
