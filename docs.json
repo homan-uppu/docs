@@ -62,7 +62,12 @@
         "groups": [
           {
             "group": "Questions",
-            "pages": ["questions/why-dilution", "questions/shareholder-voting"]
+            "pages": [
+              "questions/why-dilution",
+              "questions/shareholder-voting",
+              "questions/valuation",
+              "questions/income-dividends"
+            ]
           }
         ]
       }
