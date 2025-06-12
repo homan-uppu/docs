@@ -30,10 +30,9 @@
             "pages": [
               "fundraise-overview",
               "dilution",
-              "new-fundraising-round",
-              "invite-investors",
-              "open-round-to-net",
-              "manage-round",
+              "create",
+              "invite",
+              "manage",
               "withdraw-capital"
             ]
           },

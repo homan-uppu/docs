@@ -1,1 +1,29 @@
+---
+title: Withdraw Capital
+---
 
+Move USDC from your personal-token wallet to any external address or straight back to your bank.
+
+### 1. Open the “Withdraw USDC” panel
+
+Enter the amount you'd like to move. The interface shows an estimated gas fee and your post-withdrawal balance in real time.
+
+### 2. Pick a destination
+
+1. Crypto wallet: Paste any ERC-20 address you control (MetaMask, Ledger, Coinbase Wallet, etc.).
+2. Fiat off-ramp: Select “Bank transfer” to use our Stripe / FortressPay off-ramp. You’ll enter your routing and account numbers once; future withdrawals clear automatically.
+
+### 3. Confirm the transaction
+
+1. For blockchain withdrawals we broadcast the transfer instantly; you'll see funds after the usual confirmation window.
+2. For bank withdrawals PTN first sends USDC to the off-ramp partner, which converts to USD and pushes an ACH credit to your bank (1-2 business days).
+
+### 4. Track status
+
+Every withdrawal gets a unique ID and a status badge—Pending, In Flight, Completed. You can download a CSV for tax records any time.
+
+---
+
+**Withdraw limits**: During early access you can withdraw up to \$250 000 per rolling 24-hour period. Larger amounts require a quick email to compliance for manual approval.
+
+**Gas optimisation**: We batch small requests. If you're withdrawing less than \$100 USDC, we'll wait up to 10 minutes to combine it with other outbound transfers so everyone saves on gas.

@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-### How it works
+### How It Works
 
 This is a brief overview of the main concepts of PersonalTokenNet.
 ## A personal token
@@ -44,13 +44,15 @@ When you fundraise, both you and investors will be asked to sign a [Token Purcha
 If you're raising more than $250,000, a [single-member California LLC](/legal#llc-issuer-after-250k-in-total-primary-sales) will be formed on your behalf which will be the [legal issuer](/legal#issuer) of the personal token.
 After you successfuly fundraise, [a Form D and a California Blue-Sky Notice](/legal#filings-for-successful-fundraising-rounds) are filed on your behalf.
 ## Taxes
+Yeah, there's some tax paperwork that we'll make seamless for you (filing on your behalf wherever possible while keeping you in the loop).
+[Learn more about taxes](/tax).
 ## Technology
 ## Privacy
 ## The Net vs. the Company (CCorp)
 
 ---
 
-### What is a personal token?
+### A personal token
 
 Your personal token is an instrument that represents your equities in companies and other personal tokens.
 ![\2](\1)
@@ -62,7 +64,7 @@ A personal token is associated with a wallet that holds [USDC](https://www.notio
 
 ---
 
-### Create your personal token
+### Create Personal Token
 
 During the onboarding you'll receive a link to verify your identity by submitting a government issued ID and a selfie photo.
 Once your identity is verified, you'll be issued a personal token and will be able to start transacting on the Net.
@@ -85,7 +87,7 @@ When you complete the round, the investment funds are immediately deposited into
 
 With each funding round, ownership percentages shift as new shares are issued. Your original shareholders (including yourself) will experience some degree of ownership dilution as the total number of outstanding shares increases.
 Dilution is when the percentage ownership of existing shareholders, including the token owner, decreases when the token owner issues new shares during a fundraising round.
-For example: let's say your personal token has 10 million total shares, and you own 9 million (90%) after an initial fundraising round where investors purchased 1 million shares (10%). If you decide to raise more capital by selling an additional 1 million new shares, the total share count increases to 11 million. After this second round, you would own 9 million out of 11 million shares (approximately 81.8%), while your initial investors would own 1 million out of 11 million (approximately 9.1%). T
+For example: let's say your personal token has 10 million total shares, and you own 9 million (90%) after an initial fundraising round where investors purchased 1 million shares (10%). If you decide to raise more capital by selling an additional 1 million new shares, the total share count increases to 11 million. After this second round, you would own 9 million out of 11 million shares (approximately 81.8%), while your initial investors would own 1 million out of 11 million (approximately 9.1%).
 To create alignment with early investors who take the highest risk, personal tokens incorporate certain protections borrowed from traditional equity structures:1
 1. **Pro rata rights**: existing shareholders have the right (but not obligation) to participate in future funding rounds to maintain their ownership percentage. This gives early believers in your potential the opportunity to continue supporting your journey without being diluted.
 2. **Information rights**: shareholders must receive notice of an upcoming fundraising round at least a week in advance so that they have time to exercise their pro rata rights.
@@ -94,33 +96,10 @@ To create alignment with early investors who take the highest risk, personal tok
 
 ---
 
-### New Fundraising Round
+### Invite
 
-[This section is currently empty]
-
----
-
-### Invite Investors
-
-[This section is currently empty]
-
----
-
-### Open Round To Net
-
-[This section is currently empty]
-
----
-
-### Manage Round
-
-[This section is currently empty]
-
----
-
-### Withdraw Capital
-
-[This section is currently empty]
+## Invite investors
+## Open up round to entire Net
 
 ---
 
@@ -133,12 +112,6 @@ In order to accept an invitation from a user to invest, you must have sufficient
 There are 2 ways to profit from investing:
 1. [Dividends](/docs/dividends)
 2. Selling shares to another investor (or back to the token owner) at a higher price than you bought them for ([secondary sales](/docs/secondary-sales)).
-
----
-
-### Deposit Capital
-
-[This section is currently empty]
 
 ---
 
@@ -171,9 +144,32 @@ We're building tooling to make this a very simple process for you. Any discrepan
 
 ---
 
-### Tax
+### Taxes
 
-[This section is currently empty]
+## 1. Primary fundraise
+| Stage                                          | What happens in the Net                                      | Federal / CA tax result                                                                                                                                                                                | Who files / pays | When |
+| ---------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------- | ---- |
+| Token owner sells newly-minted shares for USDC | Owner receives cash; investors receive personal-token shares | **Not taxable to either side at closing**. Mirrors a corporation issuing stock: proceeds are a capital contribution, not income. Basis: investor's cost; owner's basis in newly-issued shares is zero. | —                | —    |
+## 2. Secondary sales (investor ↔ investor or investor → token-owner)
+| Stage                                                                                             | What happens on-chain                                                                 | Federal / CA tax result                                                                                 | Who files / pays | Forms & due dates                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **1. Seller transfers personal-token shares for USDC**                                            | Seller gets cash; buyer gets the shares                                               | Seller realises **cap-gain / loss** (short- or long-term)                                               | Seller           | 1040 + Schedule D / CA 540 Schedule D (trade date)                                                                                                                   |
+| **2. Seller's own _personal-token_ shareholders receive a pre-tax dividend of the seller's gain** | Smart contract “Distribute Gain” fires against SellerToken; USDC is paid out pro-rata | **Ordinary income** to each recipient shareholder (it is a dividend, not a capital gain in their hands) | Seller           | • **≤ \$250 k lifetime raises:** 1099-DIV (Box 1a), send by 31 Jan & e-file by 31 Mar • **> \$250 k:** Schedule K-1 (Form 1065), deliver by 15 Mar (or on extension) |
+| **3. 2 % royalty auto-split** (1.5 % token owner, 0.5 % NetworkToken treasury)                    | Royalty recipients get USDC in their wallets.                                         | **Ordinary income** to each recipient                                                                   | Token owner      | 1099-MISC (≤ \$250 k) or K-1 (> \$250 k)                                                                                                                             |
+_Note: the seller is the only party that files the information return (1099-DIV or K-1) with the IRS. The shareholder receiving dividends does not re-file that form; they simply copy the numbers onto their own tax return and keep the form for their records. (as it works with real world dividends)._
+## 3. Real-world equity sale by token owner (outside of Net)
+| Flow                                        | Tax on the owner                                                                            | “Dividend” inside PTN                                                                 | Tax on shareholders                                                                                                                                                    | Compliance mechanics                                                                                                                                                                                                                                                                                                                       |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Owner realises capital gain outside the Net | Owner pays federal & CA **capital-gains tax on 100 % of the gain** at the time of the sale. | PTN rules require owner to sweep the _gross_ gain (pre-tax) pro-rata to token holders | Each shareholder receives USDC. For them this is **ordinary income**, reported on 1099-DIV box 3 (non-qualified dividends). No capital-gains character passes through. | Until \$250 k lifetime raises: owner issues 1099-DIVs directly. After \$250 k: the single-member CA LLC issues Schedule K-1s instead, converting payouts to partnership distributive share (thus shareholders shoulder their piece of the capital gain and the owner avoids double taxation). The Net spits out all forms ready to submit. |
+## Summarized
+| Tax                                                                                       | Payer                      | Moment                           |
+| ----------------------------------------------------------------------------------------- | -------------------------- | -------------------------------- |
+| Federal & CA _capital-gains_ tax on Company stock exit (outside of Net)                   | Token owner / LLC          | Trade date                       |
+| Federal & CA _capital-gains_ tax on personal-token secondary sale                         | Selling shareholder        | Trade date                       |
+| Federal & CA _ordinary-income_ tax on dividends from personal token wallet                | Each receiving shareholder | Cash receipt                     |
+| CA _LLC franchise_ tax (only for personal token owners who have raised more than \$250 k) | Token LLCs (post-\$250 k)  | 15ᵗʰ day of 4ᵗʰ month; \$800 min |
+## We have your back
+Yes, filing taxes can be a pain in the ass. We're here to make sure it's as seamless as possible for you. All forms to submit will be auto-generated and wherever possible we'll file on your behalf while keeping you in the loop.
 
 ---
 
@@ -189,7 +185,7 @@ We're going to make this process as simple and automated as possible. We'll be t
 
 ### Network Token
 
-At its heart, the Network Token is an index on the potential of every citizen of the Net, by capturing a tiny fraction of every personal token that successfully raises capital. Owning shares in the Network Token is a bet on the collective potential of everyone in the Net.
+At its heart, the Network Token is an index that represents the potential of every citizen of the Net, by capturing a tiny fraction of every personal token that successfully raises capital. Owning shares in the Network Token is a bet on the collective potential of everyone in the Net.
 ### How does the Network Token capture value?
 Every time an individual raises funds through their personal token on the Net, a modest fraction of newly issued shares—just 0.1%—is automatically allocated to the Network Token treasury. In practice, this means the Network Token continuously accumulates micro-stakes across the entire ecosystem of personal tokens.
 ### Supply, allocation, and decentralization
@@ -206,17 +202,33 @@ Unlike personal tokens, the Network Token does not provide dividends to its hold
 
 ## Other
 
-### The Net
+### Sufficient Decentralization
 
-The Net is the protocol itself — a set of open, on-chain contracts that mint personal tokens, record every fundraising or secondary sale, and route the 0.10 % “equity fee” (plus any secondary-sale royalties) into a single treasury.
-Nobody owns the Net outright. It's a public-good financial rail to facilitate creating personal tokens and transacting personal token equities.
-
----
-
-### The Company (CCorp)
-
-The C-Corp is the Delaware company that: owns the flagship web/mobile front-end and trademarks, will carry the U.S. broker-dealer / ATS licences that make personal-token trading legal for retail users, employs the engineers and absorbs early compliance costs.
-In other words, the C-Corp is the first (eventually not the only) operator that connects people to the Net.
+Given the long-term nature of the underlying asset (personal tokens), this system needs to be implemented in a way that stands the test of time. Investments made today must be preserved centuries into the future. This isn't just nice-to-have, it's critically important for the success of this idea because without a sufficient guarantee of longetivity, most people wouldn't even participate (would you buy a home if you didn't think it would be around in 10 years?).
+We can only succeed with sufficient decentralization. The failure of this company or team shouldn't take the entire system with it.
+The purpose of this page is to make clear our intention and high level ideas for how we will achieve sufficient decentralization (and progressively increase degree of decentralization). We'll publish a much more detailed plan when the time is right. (_[Reach out](https://x.com/homanspirit) if you want to help._)
+## Organizational structure
+We will bring this idea to the world through two distinct entities: a non-profit foundation and a for-profit [public-benefit-company](https://en.wikipedia.org/wiki/Benefit_corporation).
+### 1. The Foundation
+(Delaware non-stock, public-benefit corporation (non-profit)).
+The Foundation owns and governs the underlying technical protocol, the ledger (information about who contains how much of which personal tokens), and the [Network Token](/network-token) & the capital that the Network Token accrues in its wallet via the [equity fees](/fees#equity-fee). The Network Token's wallet is treated as the Foundation's treasury.
+As the Net scales to the world, this Network Token will eventually represent all of humanity's potential. It's critically important we design the Foundation thoughtfully and progressively decentralize its own governance to make it resilient to individual insanity.
+### 2. The Company
+(Delaware Public Benefit Corporation (PBC)).
+The Company will be the interface between the Net and the real world by complying with all laws and regulations, and ensuring off-Net activity (relevant to personal tokens) is reflected on-Net (e.g. [reporting capital gains](/reporting-capital-gains)).
+In addition to this, the Company will create what's needed to create a thriving ecosystem of users investing in each other. This will likely include:
+- Admission & identity. (ensuring each personal token owner meets requirements and verifies identity).
+- Reputation. (penalizing)
+- Applications (that connect users to the Net).
+- Customer support
+- Ban (and / or freeze) bad actors.
+- Discovery.
+Of course, not all of these functions will exist on day 1. The Company will operate like a hungry startup: building as little as required to get traction and grow.
+## Transparency & competition
+Yes, the Company has a lot of power at the start in order to bring this idea to the world as swiftly as possible. But, the underlying set up still has a key advantage: transparency. Any move the Company makes is recorded on-chain. For example, the Company can't just ban users without everyone knowing. And therefore won't be able to be too mis-aligned with how users want to use the Net.
+And, in the case that users aren't happy with how the Company is operating (or even any function of the Company), they can always create their own companies / organizations to operate on top of the Net to compete with the Company (or some of its functions). For example, a competiting team can focus purely on building the best reputation system, or application (client) that connects to the Net, or a discovery engine to connect individuals and investors, etc.
+By opening ourselves up to such competition at the foundational level will help hold us accountable to help manifest this idea in the way that the world wants. If we begin to deviate too much from what people want, or let things get to our heads, users will (and should) have the option to switch to different providers that operate on the same Net.
+It will be the Foundation's responsibility to ensure an easy path for competitors to participate as operators on top of the Net, **even if that means competition for the Company**.
 
 ---
 
@@ -250,7 +262,7 @@ All signed documents are always accessible in your dashboard.
 
 ---
 
-## Frequently asked
+## Questions
 
 ### Why dilution?
 
@@ -258,9 +270,27 @@ Dilutive issuance maximizes deployable capital, minimizes tax drag, and signals 
 
 ---
 
-### Shareholders voting rights?
+### Shareholder voting rights?
 
-Absolutely not.
-Personal token shareholders can't vote on anything, and have no direct say in the actions of the personal token owner. A shareholder is simply a participant on the sidelines of the journey of the personal token owner.
+Can personal token shareholders vote on the actions of the personal token owner?
+Absolutely not. Personal token shareholders **don't vote on anything**, and have no direct say in the actions of the personal token owner. A shareholder is simply a helpful sideline participant in the journey of the personal token owner.
+
+---
+
+### How is valuation determined?
+
+Part convention. Part art. Part science.
+There is no set way to value a personal token, which is precisely why you need a market to approximate the value of a personal token.
+Fundamentally, how much someone values a personal token is based on how much they believe in the potential of the owner of the personal token (as defined by the value of the equities they will hold in the future in companies and other personal tokens).
+How much we value something is driven predominantly by our emotions. This is why you'll notice that when many people value a personal token highly, their optimism spreads to others like an infectious disease, driving up the value of the personal token even further.
+Especially early in a personal token owner's life,
+
+---
+
+### Is income also distributed to shareholders?
+
+NO. Personal tokens don't touch income or any other personal assets. The only assets a personal token represents is your equities in companies and other personal tokens.
+Your personal token shareholders **only** receive dividends when you sell equity in a company / personal token.
+Your income is **never** touched.
 
 ---
