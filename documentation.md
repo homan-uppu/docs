@@ -103,6 +103,25 @@ To create alignment with early investors who take the highest risk, personal tok
 
 ---
 
+### Withdraw Capital
+
+Move USDC from your personal-token wallet to any external address or straight back to your bank.
+### 1. Open the “Withdraw USDC” panel
+Enter the amount you'd like to move. The interface shows an estimated gas fee and your post-withdrawal balance in real time.
+### 2. Pick a destination
+1. Crypto wallet: Paste any ERC-20 address you control (MetaMask, Ledger, Coinbase Wallet, etc.).
+2. Fiat off-ramp: Select “Bank transfer” to use our Stripe / FortressPay off-ramp. You’ll enter your routing and account numbers once; future withdrawals clear automatically.
+### 3. Confirm the transaction
+1. For blockchain withdrawals we broadcast the transfer instantly; you'll see funds after the usual confirmation window.
+2. For bank withdrawals PTN first sends USDC to the off-ramp partner, which converts to USD and pushes an ACH credit to your bank (1-2 business days).
+### 4. Track status
+Every withdrawal gets a unique ID and a status badge—Pending, In Flight, Completed. You can download a CSV for tax records any time.
+---
+**Withdraw limits**: During early access you can withdraw up to \$250 000 per rolling 24-hour period. Larger amounts require a quick email to compliance for manual approval.
+**Gas optimisation**: We batch small requests. If you're withdrawing less than \$100 USDC, we'll wait up to 10 minutes to combine it with other outbound transfers so everyone saves on gas.
+
+---
+
 ## Invest
 
 ### Overview
@@ -112,6 +131,25 @@ In order to accept an invitation from a user to invest, you must have sufficient
 There are 2 ways to profit from investing:
 1. [Dividends](/docs/dividends)
 2. Selling shares to another investor (or back to the token owner) at a higher price than you bought them for ([secondary sales](/docs/secondary-sales)).
+
+---
+
+### Deposit Capital (USDC)
+
+Getting money into your PersonalTokenNet wallet is as simple as funding any other USDC-compatible address—think of it as topping up an exchange account.
+### 1. Grab your wallet address
+In your dashboard you'll see a “Deposit USDC” panel. Copy the address shown there; it is a standard ERC-20 address that lives on the same chain the Net runs on.
+### 2. Choose an on-ramp
+Already have USDC? Send it directly from any self-custody wallet (e.g., MetaMask, Coinbase Wallet) or exchange (Coinbase, Kraken, Gemini).
+Need to buy USDC with dollars? Use an integrated fiat on-ramp (Ramp Network or Stripe on-ramp) or buy on a major exchange, then withdraw to the address from Step 1.
+### 3. Make the transfer
+Select the same network PTN uses (Ethereum Mainnet during early access).
+Paste the address, pick an amount, and confirm.
+The dashboard marks the deposit as “Pending” while we wait for 3 block confirmations, then credits your personal-token wallet automatically.
+---
+**Heads-up on fees**: You pay the normal gas fee to move USDC on-chain; PTN charges nothing to accept a deposit.
+**Minimums**: For now we accept deposits as small as $25 to keep gas overhead reasonable.
+Once your balance shows up you can invest in other personal tokens immediately.
 
 ---
 
@@ -229,12 +267,6 @@ Yes, the Company has a lot of power at the start in order to bring this idea to 
 And, in the case that users aren't happy with how the Company is operating (or even any function of the Company), they can always create their own companies / organizations to operate on top of the Net to compete with the Company (or some of its functions). For example, a competiting team can focus purely on building the best reputation system, or application (client) that connects to the Net, or a discovery engine to connect individuals and investors, etc.
 By opening ourselves up to such competition at the foundational level will help hold us accountable to help manifest this idea in the way that the world wants. If we begin to deviate too much from what people want, or let things get to our heads, users will (and should) have the option to switch to different providers that operate on the same Net.
 It will be the Foundation's responsibility to ensure an easy path for competitors to participate as operators on top of the Net, **even if that means competition for the Company**.
-
----
-
-### Reputation
-
-[This section is currently empty]
 
 ---
 
