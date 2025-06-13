@@ -96,10 +96,49 @@ To create alignment with early investors who take the highest risk, personal tok
 
 ---
 
+### New Round
+
+### Create
+When you're ready to raise capital, you'll start by creating a new round inside the Fundraise tab. Think of this as setting the “term sheet” for your personal token. You define two key variables that together establish the economics of the offering:
+1. **Target amount (USDC)**: the total capital you want to raise in this round. Must be greater than 5000 USD.
+2. **Price per share (USDC)**: determined by what you want your personal token valuation to be. _(If you're confused about how to [determine the valuation](/questions/valuation), we'll help you think it through. In some cases, the valuation will be determined by an investor you're looking to raise from.)_
+Auto-calculated: **Number of shares to sell** (the number of new shares that will be minted and issued).
+Your round is considered "active" after you've created it, until is has been completed or canceled.
+### Authorize
+(something about reporting capital gains)
+
+---
+
 ### Invite
 
-## Invite investors
-## Open up round to entire Net
+## Visibility states
+Your active round can be in one of the following states:
+1. **Private Invite Only**. Explicitly select users in the Net to send an invitation to participate in your round. Those outside of the people you invite won't be able to view your active round.
+2. **Private With Link**. Anyone with a link to your fundraising round can view it and request to participate.
+3. **Open to Net**. Any user on the Net can view your fundraising round and request to participate.
+## Transaction
+When an investor accepts your invitation to invest, they submit how much they want to invest. Once you view their proposal, you have the option to "accept". At this point, the capital from the investor's wallet is transferred to an escrow on chain that holds it until 6hrs after the round is completed (you can change this "delay" duration in your settings), at which point it is transferred to your wallet. In the case the round is canceled, the capital is returned to the investor's wallet.
+
+---
+
+### Manage
+
+## Complete
+Mark your fundraising round as **Complete** when you have finished accepting investments and are ready to finalize the round. Completing a round will:
+1. Lock in the final list of investors and their share allocations.
+2. Trigger the transfer of funds from escrow to your wallet (after the "completion delay" period — see "Undo" below).
+3. Update the ownership records for your personal token.
+---
+## Cancel
+You can cancel an active round at any time before it is completed.
+Canceling a round will:
+1. Return all escrowed funds to the investors who participated.
+2. Void any pending or accepted investment offers for this round.
+3. Leave your cap table unchanged.
+Canceling is irreversible—if you want to raise again, you'll need to start a new round.
+---
+## Undo
+By default, you can undo a round for up to 6 hours after it has been completed. You can edit this "completion delay" value in your settings.
 
 ---
 
@@ -118,7 +157,6 @@ Enter the amount you'd like to move. The interface shows an estimated gas fee an
 Every withdrawal gets a unique ID and a status badge—Pending, In Flight, Completed. You can download a CSV for tax records any time.
 ---
 **Withdraw limits**: During early access you can withdraw up to \$250 000 per rolling 24-hour period. Larger amounts require a quick email to compliance for manual approval.
-**Gas optimisation**: We batch small requests. If you're withdrawing less than \$100 USDC, we'll wait up to 10 minutes to combine it with other outbound transfers so everyone saves on gas.
 
 ---
 
@@ -148,8 +186,6 @@ Paste the address, pick an amount, and confirm.
 The dashboard marks the deposit as “Pending” while we wait for 3 block confirmations, then credits your personal-token wallet automatically.
 ---
 **Heads-up on fees**: You pay the normal gas fee to move USDC on-chain; PTN charges nothing to accept a deposit.
-**Minimums**: For now we accept deposits as small as $25 to keep gas overhead reasonable.
-Once your balance shows up you can invest in other personal tokens immediately.
 
 ---
 
